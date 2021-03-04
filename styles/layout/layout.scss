@@ -19,25 +19,31 @@ section {
 
 .col-2 {
 	width: 50%;
-}
-.col-4 {
-	width: 25%;
-}
 
-@media all and (max-width: 800px) {
-	.col-2 {
+	@media all and (max-width: 900px) {
 		width: 100%;
 		&:first-child {
 			margin-bottom: 2em;
 		}
 	}
-	.col-4 {
+}
+.col-4 {
+	width: 25%;
+
+	@media all and (max-width: 1000px) {
 		width: 50%;
+	}
+	@media all and (max-width: 550px) {
+		width: 100%;
 	}
 }
 
 .dark-bg-text {
-	h1, h2, h3, p, ul {
+	h1,
+	h2,
+	h3,
+	p,
+	ul {
 		color: $dark-bg-text;
 	}
 }

@@ -4,7 +4,8 @@ form {
 	.widget {
 		position: relative;
 		margin-bottom: 1em;
-        &.focused {
+        &.focused,
+        &.has-value {
             label {
                 top: -0.5em;
                 left: 0;

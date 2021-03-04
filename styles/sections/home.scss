@@ -1,4 +1,4 @@
-@import '../mixins';
+@import "../mixins";
 
 #home {
 	background-image: url("../../img/banner-1.png");
@@ -36,14 +36,25 @@
 		}
 	}
 
-	@media all and (max-width: 800px) {
+	@media all and (max-width: 900px) {
 		padding-top: 6em;
+		padding-bottom: 3em;
 		&:after {
 			display: none;
 		}
 
 		.wrapper {
 			@include flex-direction(column-reverse);
+		}
+
+		.text-container {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		p {
+			margin-bottom: 2em;
 		}
 
 		.image-container {

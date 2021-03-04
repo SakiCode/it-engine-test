@@ -19,7 +19,7 @@ footer {
 			p {
 				color: $dark-text;
 				font-weight: 700;
-                margin-right: 0.6em;
+				margin-right: 0.6em;
 			}
 			a {
 				background-color: transparent;
@@ -27,19 +27,38 @@ footer {
 				padding: 0.7em;
 				margin-right: 0.25em;
 				color: $brand-color;
-                &:hover {
-                    background-color: $brand-color;
-                    color: $dark-bg-text;
-                }
+				&:hover {
+					background-color: $brand-color;
+					color: $dark-bg-text;
+				}
 			}
 		}
 
 		&:last-child {
 			text-align: right;
 
-            a:hover {
-                color: rgba($brand-color, 0.7);
-            }
+			a:hover {
+				color: rgba($brand-color, 0.7);
+			}
+		}
+	}
+
+	@media all and (max-width: 900px) {
+		.col-2 {
+			width: 60%;
+			&:first-child {
+				width: 40%;
+				margin-bottom: 0;
+			}
+		}
+	}
+	@media all and (max-width: 600px) {
+		.col-2 {
+			&:first-child,
+			&:last-child {
+				width: 100%;
+				text-align: center;
+			}
 		}
 	}
 }

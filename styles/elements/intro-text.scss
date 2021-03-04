@@ -5,4 +5,8 @@
 	margin-right: auto;
 	margin-bottom: 3em;
 	width: 100%;
+
+	@media all and (max-width: 560px) {
+		max-width: 90%;
+	}
 }

@@ -1,3 +1,5 @@
+@import '../mixins';
+
 #contact {
 	.intro-text {
 		text-align: left;
@@ -10,14 +12,34 @@
 
 	.image-container {
 		width: 40%;
-		text-align: center;
 		background-image: url("../../img/circle.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
 
 		img {
 			max-width: 22em;
+		}
+	}
+
+	@media all and (max-width: 1000px) {
+		.image-container {
+			img {
+				max-width: 15em;
+			}
+		}
+	}
+	@media all and (max-width: 750px) {
+		.wrapper {
+			@include flex-direction(column-reverse);
+		}
+
+		.form-container,
+		.image-container {
+			width: 100%;
 		}
 	}
 }

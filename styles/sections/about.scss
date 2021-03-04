@@ -1,0 +1,154 @@
+@import "../variables";
+@import "../mixins";
+
+#about {
+	.about_part-one,
+	.about_part-two,
+	.about_part-three {
+		padding-top: 8em;
+		padding-bottom: 8em;
+	}
+	.about_part-one,
+	.about_part-three {
+		background-color: $light-background;
+	}
+	.about_part-one {
+		.col-2:first-child {
+			background-image: url("../../img/circle.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.image-container {
+			text-align: center;
+		}
+		img {
+			max-width: 22em;
+		}
+
+		.col-2:last-child {
+			background-color: #fff;
+			-webkit-box-shadow: 0 0 1.25em 0.3em rgb(0 0 0 / 10%);
+			box-shadow: 0 0 1.25em 0.3em rgb(0 0 0 / 10%);
+			padding: 2.5em;
+		}
+
+		.check-list {
+			margin-bottom: 0;
+		}
+		li {
+			margin-bottom: 1em;
+		}
+	}
+
+	.about_part-two {
+		background-image: url("../../img/banner-3.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		.wrapper {
+			@include align-items(center);
+		}
+
+		.col-2:last-child {
+			background-image: url("../../img/circle-1.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			@include flexbox;
+			@include align-items(center);
+			@include justify-content(center);
+			height: 24em;
+		}
+		.video-container {
+			width: 100%;
+		}
+		button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+		}
+		iframe {
+			padding-left: 2em;
+		}
+	}
+
+	.about_part-three {
+		background-image: url("../../img/circle-2.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position-x: -23em;
+		.image-slider {
+			background-color: #FFEDE8;
+			width: 35%;
+			position: relative;
+		}
+
+		.image-container {
+			text-align: center;
+			padding-top: 3em;
+		}
+
+		.slide-buttons {
+			width: 10em;
+			margin-left: auto;
+			margin-right: auto;
+			position: absolute;
+			bottom: 2em;
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
+
+		.slide-next,
+		.slide-prev {
+			background-color: #130f40;
+			color: $dark-bg-text;
+			padding: 1em;
+			border: 0;
+			margin-left: 0.5em;
+			margin-right: 0.5em;
+			&:hover {
+				background-color: rgba(#130f40, 0.7);
+			}
+			span {
+				&:before {
+					font-size: 0.75em;
+				}
+			}
+		}
+
+		.slide-prev {
+			span {
+				&:before {
+					display: block;
+					@include transform(rotate(180deg));
+				}
+			}
+		}
+
+		.icons-container {
+			width: 60%;
+			padding-top: 2em;
+			padding-right: 4em;
+			@include flexbox;
+			@include flex-wrap(wrap);
+
+			.col-2 {
+				padding-top: 1em;
+				padding-right: 3em;
+			}
+
+			span {
+				display: inline-block;
+				margin-bottom: 1em;
+				&:before {
+					color: $brand-color;
+					font-size: 3em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+@import "../mixins";
+@import "../variables";
+
+body {
+	width: 100%;
+	max-width: 2080px;
+	margin: auto;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	@include wrapper;
+}
+
+section {
+	margin-bottom: 6em;
+}
+
+.col-2 {
+	width: 50%;
+}
+.col-4 {
+	width: 25%;
+}
+
+@media all and (max-width: 800px) {
+	.col-2 {
+		width: 100%;
+		&:first-child {
+			margin-bottom: 2em;
+		}
+	}
+	.col-4 {
+		width: 50%;
+	}
+}
+
+.dark-bg-text {
+	h1, h2, h3, p, ul {
+		color: $dark-bg-text;
+	}
+}

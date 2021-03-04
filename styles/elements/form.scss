@@ -1,0 +1,38 @@
+@import "../variables";
+
+form {
+	.widget {
+		position: relative;
+		margin-bottom: 1em;
+        &.focused {
+            label {
+                top: -0.5em;
+                left: 0;
+                font-size: 0.9em;
+            }
+        }
+	}
+
+	label,
+	input,
+	textarea {
+		color: $bright-text;
+	}
+	input,
+	textarea {
+		border: none;
+		border-bottom: 1px solid #e6f0fa;
+		outline: none;
+		width: 100%;
+		padding: 1em;
+		font-family: $font;
+	}
+	label {
+		position: absolute;
+		top: 1em;
+		left: 1em;
+		font-size: 1em;
+		cursor: text;
+        transition: all 0.3s ease-in-out;
+	}
+}

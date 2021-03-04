@@ -1,0 +1,59 @@
+@import "../mixins";
+
+// icomoon
+@font-face {
+	font-family: "icomoon";
+	src: url("../../fonts/icomoon.eot?xsx0et");
+	src: url("../../fonts/icomoon.eot?xsx0et#iefix") format("embedded-opentype"),
+		url("../../fonts/icomoon.ttf?xsx0et") format("truetype"),
+		url("../../fonts/icomoon.woff?xsx0et") format("woff"),
+		url("../../fonts/icomoon.svg?xsx0et#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	@include icomoon;
+}
+
+.icon-facebook:before {
+	content: "\e90a";
+}
+.icon-google-plus:before {
+	content: "\e90b";
+}
+.icon-twitter:before {
+	content: "\e90c";
+}
+.icon-arrow-right:before {
+	content: "\e900";
+}
+.icon-check:before {
+	content: "\e901";
+}
+.icon-cloud-storage:before {
+	content: "\e902";
+}
+.icon-computer:before {
+	content: "\e903";
+}
+.icon-quote:before {
+	content: "\e904";
+}
+.icon-open-box:before {
+	content: "\e905";
+}
+.icon-play-button:before {
+	content: "\e906";
+}
+.icon-shopping-cart:before {
+	content: "\e907";
+}
+.icon-star:before {
+	content: "\e908";
+}
+.icon-users:before {
+	content: "\e909";
+}

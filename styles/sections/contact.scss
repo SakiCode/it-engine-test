@@ -1,0 +1,23 @@
+#contact {
+	.intro-text {
+		text-align: left;
+		margin-left: 0;
+	}
+
+	.form-container {
+		width: 60%;
+	}
+
+	.image-container {
+		width: 40%;
+		text-align: center;
+		background-image: url("../../img/circle.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		img {
+			max-width: 22em;
+		}
+	}
+}

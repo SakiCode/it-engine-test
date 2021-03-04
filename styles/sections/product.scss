@@ -1,0 +1,52 @@
+@import "../variables";
+@import "../mixins";
+
+#product {
+	.wrapper {
+		background-color: rgba($brand-color, 0.1);
+		> .col-2 {
+			@include flexbox;
+			padding-top: 3em;
+			padding-bottom: 3em;
+			border: 2px solid #E6F0FA;
+		}
+	}
+
+	.image-container {
+		text-align: center;
+	}
+	img {
+		max-width: 9em;
+	}
+
+	h3 {
+		margin-bottom: 0.7em;
+	}
+	p {
+		font-weight: 700;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.current-price {
+		color: $dark-text;
+		font-size: 1.5em;
+        margin-right: 0.5em;
+        margin-bottom: 1em;
+	}
+	.prev-price {
+		text-decoration: line-through;
+	}
+
+    .order {
+        border-color: #341F97;
+        color: #341F97;
+        background-color: transparent;
+        &:hover {
+            background-color: #341F97;
+            color: $dark-bg-text;
+        }
+        span {
+            margin-right: 0.25em;
+        }
+    }
+}

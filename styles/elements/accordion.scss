@@ -1,0 +1,72 @@
+@import "../variables";
+@import "../mixins";
+
+.accordion {
+	border: 1px solid #ebf2f9;
+	border-radius: 0.3em;
+	margin-bottom: 0.5em;
+
+	.accordion-header {
+		position: relative;
+		background-color: $light-background;
+		font-weight: 700;
+		font-size: 1.1em;
+		padding: 1em;
+		cursor: pointer;
+		span {
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 1em;
+			width: 0.8em;
+			height: 0.8em;
+			margin-top: auto;
+			margin-bottom: auto;
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				background-color: $brand-color;
+				width: 100%;
+				height: 4px;
+				margin-top: auto;
+				margin-bottom: auto;
+			}
+			&:after {
+				@include transform(rotate(90deg));
+				transition: transform 0.3s ease-in-out;
+			}
+		}
+	}
+
+	.accordion-content {
+		height: auto;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease-in-out;
+		.inner-wrap {
+			padding: 1.5em 1.2em;
+		}
+		p {
+			font-weight: 700;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&.active {
+		.accordion-header {
+			span:after {
+				@include transform(rotate(180deg));
+			}
+		}
+		.accordion-content {
+			max-height: 50em;
+		}
+	}
+}

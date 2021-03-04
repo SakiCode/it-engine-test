@@ -1,0 +1,21 @@
+@import "../mixins";
+@import "../variables";
+
+.check-list {
+	li {
+		position: relative;
+        padding-left: 1em;
+        margin-bottom: 0.5em;
+		font-size: 0.9em;
+		font-weight: 700;
+		&:before {
+			content: "\e901";
+			@include icomoon;
+            font-size: 0.6em;
+			color: $checkmark-color;
+			position: absolute;
+			left: 0;
+            top: 1em;
+		}
+	}
+}

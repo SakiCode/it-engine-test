@@ -1,0 +1,45 @@
+@import "../variables";
+@import "../mixins";
+
+footer {
+	background-color: $light-background;
+	padding-top: 3em;
+	padding-bottom: 2em;
+
+	.wrapper {
+		@include align-items(center);
+	}
+
+	.col-2 {
+		&:first-child {
+			p,
+			a {
+				display: inline-block;
+			}
+			p {
+				color: $dark-text;
+				font-weight: 700;
+                margin-right: 0.6em;
+			}
+			a {
+				background-color: transparent;
+				border: 1px solid $brand-color;
+				padding: 0.7em;
+				margin-right: 0.25em;
+				color: $brand-color;
+                &:hover {
+                    background-color: $brand-color;
+                    color: $dark-bg-text;
+                }
+			}
+		}
+
+		&:last-child {
+			text-align: right;
+
+            a:hover {
+                color: rgba($brand-color, 0.7);
+            }
+		}
+	}
+}

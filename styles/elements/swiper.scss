@@ -1,0 +1,89 @@
+@import "../variables";
+@import "../mixins";
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-wrapper {
+	margin-bottom: 2.5em;
+}
+
+.swiper-slide {
+	background: #fff;
+	border: 1px solid #ebf2f9;
+	border-radius: 0.5em;
+	text-align: center;
+	padding: 3em 1.5em 1.5em 1.5em;
+
+	.image-container {
+		width: 5em;
+		height: 5em;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1em;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	h3 {
+		color: $brand-color;
+	}
+	.icon-quote {
+		display: block;
+		margin-bottom: 1em;
+		&:before {
+			color: #6d70a6;
+			font-size: 2em;
+		}
+	}
+	.stars {
+		margin-bottom: 1em;
+	}
+	.icon-star::before {
+		font-size: 0.8em;
+		color: #f9aa1f;
+	}
+}
+
+.swiper-arrows {
+	width: 8em;
+	margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+}
+.swiper-button-prev,
+.swiper-button-next {
+	display: inline-block;
+	background-color: #fff;
+	border: 1px solid #f2f7ff;
+	border-radius: 0.25em;
+	padding: 0.8em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+	color: #040da8;
+	cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+        background-color: #eee;
+    }
+
+	span {
+		&:before {
+			font-size: 0.8em;
+		}
+	}
+}
+.swiper-button-prev {
+	span {
+		&:before {
+			display: block;
+			@include transform(rotate(180deg));
+		}
+	}
+}
